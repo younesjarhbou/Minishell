@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   init_data.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aaggoujj <aaggoujj@student.42.fr>          +#+  +:+       +#+        */
+/*   By: yjarhbou <yjarhbou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/24 19:59:42 by aaggoujj          #+#    #+#             */
-/*   Updated: 2022/10/12 15:36:56 by aaggoujj         ###   ########.fr       */
+/*   Updated: 2022/10/15 22:48:16 by yjarhbou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,6 +79,8 @@ void	init_data(t_data *data, char *envp[], char *line)
 {
 	(void)envp;
 	data->token = (t_token *)malloc(sizeof(t_token));
+	if (!data->token)
+		exit(1);
 	data->scanner = NULL;
 	data->token->cmd = NULL;
 	data->token->here_doc = NULL;

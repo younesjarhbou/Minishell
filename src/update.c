@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   update.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aaggoujj <aaggoujj@student.42.fr>          +#+  +:+       +#+        */
+/*   By: yjarhbou <yjarhbou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/27 14:30:39 by aaggoujj          #+#    #+#             */
-/*   Updated: 2022/10/12 18:06:30 by aaggoujj         ###   ########.fr       */
+/*   Updated: 2022/10/15 22:49:20 by yjarhbou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -99,6 +99,8 @@ void	update_underscore(t_data *data, char **args)
 	else
 	{
 		e = malloc(sizeof(t_env));
+		if (!e)
+			exit(1);
 		e->name = ft_strdup("_");
 		e->value = ft_strdup(last_args(args));
 		ft_lstadd_back(&data->envp, ft_lstnew(e));

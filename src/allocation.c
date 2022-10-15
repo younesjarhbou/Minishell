@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   allocation.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aaggoujj <aaggoujj@student.42.fr>          +#+  +:+       +#+        */
+/*   By: yjarhbou <yjarhbou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/24 18:39:29 by aaggoujj          #+#    #+#             */
-/*   Updated: 2022/10/12 15:38:08 by aaggoujj         ###   ########.fr       */
+/*   Updated: 2022/10/15 22:43:54 by yjarhbou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ void	*ft_any_alloc(size_t size, size_t len)
 
 	ptr = malloc(size * len);
 	if (!ptr)
-		return (NULL);
+		return (exit(1), NULL);
 	ft_memset(ptr, 0, size * len);
 	return (ptr);
 }
